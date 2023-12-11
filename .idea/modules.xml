@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Operators/Operators.iml" filepath="$PROJECT_DIR$/Operators/Operators.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" filepath="$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestExam/TestExam.iml" filepath="$PROJECT_DIR$/TestExam/TestExam.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocp-java-se11.iml" filepath="$PROJECT_DIR$/ocp-java-se11.iml" />
     </modules>
   </component>
