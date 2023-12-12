@@ -34,5 +34,24 @@ public class UnaryOperatorMore {
         boolean newBoolean = !myBoolean;
         System.out.println("myBoolean = " + myBoolean +
                 ", the opposite is = " + newBoolean);
+
+
+
+
+
+//        short a1 = 10;
+//        int b1 = 100000000;
+//        a1 += b1;
+
+//        short a1 = 10;
+//        long b1 = 20L;
+//        int result = a1 + b1;
+//
+//        short xxx =1;
+//        short yyy =1;
+//
+//        short ax= xxx/yyy;
+//
+//        System.out.println(a1);
     }
 }

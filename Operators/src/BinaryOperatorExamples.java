@@ -154,5 +154,8 @@ public class BinaryOperatorExamples {
         System.out.println("Conditional && (AND) will evaluate both " +
                 "expressions if first evaluates to true: a = "
                 + a + ", and b = " + b);
+
+
+
     }
 }
