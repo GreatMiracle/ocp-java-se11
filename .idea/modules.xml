@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" filepath="$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objects/objects.iml" filepath="$PROJECT_DIR$/objects/objects.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocp-java-se11.iml" filepath="$PROJECT_DIR$/ocp-java-se11.iml" />
     </modules>
   </component>
