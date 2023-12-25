@@ -56,10 +56,11 @@ public class AnimalVisit {
 
         // Call the overridden method
         System.out.println("Chip Date = " + pug.getChipDate());
+        System.out.println("Chip Date pug = " + pug);
 
         // Try to force the call to the parent's method
         Animal a = pug;
-        System.out.println("Chip Date = " + a.getChipDate());
+        System.out.println("Chip Date animal = " + a);
 
         // Call the supplemented method
         System.out.println("Chip Date = " + pug.getChildChipDate());
