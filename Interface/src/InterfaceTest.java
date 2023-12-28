@@ -45,7 +45,6 @@ interface InterfaceExample {
 
 public class InterfaceTest implements InterfaceExample {
     public static void main(String[] args) {
-
         // Regardless of how you define it, a variable on an interface is
         // public static final
         System.out.println("All fields on an interface are" +
