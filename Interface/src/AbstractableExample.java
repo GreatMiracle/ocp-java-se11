@@ -4,6 +4,9 @@
 // implicitly on an interface.
 interface Abstractable {
     void makeConcrete();
+    default void makeConcrete1(){
+        System.out.println();
+    };
 }
 
 // An abstract class does NOT have to define concrete methods
@@ -13,7 +16,7 @@ abstract class AbstractClass implements Abstractable {
     // Create an additional abstract method -
     // Note that this method is NOT public, but package-private
     // and you must declare it abstract.
-    abstract void callConcrete();
+    public abstract void makeConcrete();
 }
 
 // AbstractableExample extends AbstractClass (which in turn
