@@ -86,3 +86,5 @@ public class CompareExamples {
                 + GlobalInformation.TreeCount);
     }
 }
+
+//test
