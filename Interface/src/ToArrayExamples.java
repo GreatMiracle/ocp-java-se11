@@ -127,6 +127,17 @@ public class ToArrayExamples {
         testValue = (int) dRaw[0];
         System.out.println("--- Cast required at individual level:" +
                 " the first element is " + testValue);
+
+
+
+
+        ArrayList<String> blist = new ArrayList<>(List.of("A", "B", "C", "D"));  // Line 1
+        String[] bArray = blist.toArray(new String[5]);   // Line 2
+        ArrayList<String> clist = new ArrayList<String>(List.of(bArray));   // Line 3
+
+        clist.add("E");
+        System.out.println(clist);
+
     }
 
 }
