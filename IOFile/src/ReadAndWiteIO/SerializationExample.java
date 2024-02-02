@@ -137,7 +137,7 @@ public class SerializationExample {
     public static void main(String[] args) throws IOException,
             ClassNotFoundException {
 
-        String fileName = "IOFile/src/ReadAndWiteIO/Brandy.ser";
+        String fileName = "IOFile/src/ReadAndWiteIO/Brandy_Serializable.ser";
 
         Pet originalPet = new Pet("Brandy", "Dog");
         System.out.println("--------- Original State -----------");
