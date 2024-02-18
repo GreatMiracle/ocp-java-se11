@@ -13,7 +13,7 @@ public class FilesInformationGathering {
     public static void main(String[] args) {
 
         // Create a path to a file in current working directory;
-        Path testFile = Path.of("TestingFile.txt");
+        Path testFile = Path.of("D:\\Documents\\LEARN DEVOPS\\learn-ocp\\ocp-java-se11\\IOFile\\src\\ReadAndWiteIO\\binaryIOData.bin");
 
         // Execute tests for existence on the file
         System.out.println("File " + testFile + " exists? " +
@@ -22,19 +22,19 @@ public class FilesInformationGathering {
                 Files.notExists(testFile));
 
         // Create a path to a relative directory that should exist
-        Path outPath = Path.of("out//production");
-
-        // Execute tests for existence on the path
-        System.out.println("Path " + outPath + " exists? " +
-                Files.exists(outPath));
-        System.out.println("Path " + outPath + " does not exist? " +
-                Files.notExists(outPath));
-
-        // Gather information about a file
+//        Path outPath = Path.of("out//production");
+//
+//        // Execute tests for existence on the path
+//        System.out.println("Path " + outPath + " exists? " +
+//                Files.exists(outPath));
+//        System.out.println("Path " + outPath + " does not exist? " +
+//                Files.notExists(outPath));
+//
+//        // Gather information about a file
         getInformation(testFile);
 
         // Gather information about a directory
-        getInformation(outPath);
+//        getInformation(outPath);
 
     }
 
