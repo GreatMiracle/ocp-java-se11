@@ -1,6 +1,8 @@
 package OutOfTheOrdinary;
 
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -81,7 +83,10 @@ public class IOFilesCopyMove {
 
     public static void main(String[] args) throws IOException {
 //        testFileToFile();
-        testFileToDir();
+//        testFileToDir();
+//        testDirToFile();
+        copyPathToOutputStream();
+        copyInputStreamToPath();
     }
 
     // Uses Files.walk recursively to delete all elements in a directory.
@@ -145,5 +150,161 @@ public class IOFilesCopyMove {
         printDir(directoryTarget.getParent());
         copyMethod(fileSource, directoryTarget.getParent());
 
+    }
+
+
+
+    // Tests copying a Directory to a existing File
+    private static void testDirToFile() throws IOException {
+        Path fileTarget = Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedFrom.txt");
+        Path directorySource = Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedFromDir");
+
+        // Delete source file if it exists.
+        Files.deleteIfExists(fileTarget);
+        // Create source file, add a String
+        Files.writeString(fileTarget, "Hello");
+
+
+        // Delete target directory if it exists.
+        deleteDir(directorySource);
+        // Recreate target directory
+        Files.createDirectory(directorySource);
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing Empty Directory to Existing File");
+        System.out.println("--------------------------------------");
+        // First Test - copy existing directoy to a target that
+        // is an existing file
+        printDir(directorySource);
+        copyMethod(directorySource, fileTarget);
+
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing Non-Empty Directory to Existing File");
+        System.out.println("--------------------------------------");
+        // Second Test -copy existing directoy to a target that
+        // is an existing file, directory is not empty.
+        Files.deleteIfExists(directorySource);
+        directorySource = Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedFromDir\\subDirectory");
+        Files.createDirectories(directorySource);
+        printDir(directorySource.getParent());
+        copyMethod(directorySource.getParent(), fileTarget);
+
+    }
+
+
+    // Test Files.copy(Path source, OutputStream out)
+    public static void copyPathToOutputStream() throws IOException {
+
+        Path fileSource = Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedFrom.txt");
+
+        // Delete source file if it exists.
+        Files.deleteIfExists(fileSource);
+        // Create source file, add a String
+        Files.writeString(fileSource, "Hello");
+
+        Files.deleteIfExists(Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt"));
+
+        long copiedBytes = -1;
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing file to non-existing " +
+                "file using OutputStream");
+        System.out.println("--------------------------------------");
+        // Copy to a file that doesn't exist
+        // Use try-with-resources to auto close the FileOutputStream
+        try (FileOutputStream fos = new FileOutputStream("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt")) {
+            copiedBytes = Files.copy(fileSource, fos);
+            System.out.println("copiedBytes = " + copiedBytes);
+        }
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing file to existing " +
+                "file using OutputStream");
+        System.out.println("--------------------------------------");
+        // Copy to a file that exists
+        // Use try-with-resources to close the OutputStream
+        try (FileOutputStream fos = new FileOutputStream("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt")) {
+            copiedBytes = Files.copy(fileSource, fos);
+            System.out.println("copiedBytes = " + copiedBytes);
+        }
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing file to existing " +
+                "file using OutputStream with append = true");
+        System.out.println("--------------------------------------");
+        // Copy to a file that exists
+        // Use try-with-resources to close the OutputStream
+        try (FileOutputStream fos = new FileOutputStream("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt", true)) {
+            copiedBytes = Files.copy(fileSource, fos);
+            System.out.println("copiedBytes = " + copiedBytes);
+            Files.readAllLines(Path.of("copiedTo.txt"))
+                    .forEach(System.out::println);
+        }
+    }
+
+    // Test Files.copy(InputStream source, Path target, CopyOption... options)
+    public static void copyInputStreamToPath() throws IOException {
+
+        Path fileSource = Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedFrom.txt");
+
+        // Delete source file if it exists.
+        Files.deleteIfExists(fileSource);
+        // Create source file, add a String
+        Files.writeString(fileSource, "Hello");
+
+        Path fileTarget = Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt");
+
+        // Delete source file if it exists.
+        Files.deleteIfExists(fileTarget);
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing file to non-existing " +
+                "file using InputStream ");
+        System.out.println("--------------------------------------");
+        // Copy to a file that does not exist
+        // Use try-with-resources to close the InputStream
+        try (FileInputStream fis = new FileInputStream(
+                fileSource.toString())) {
+            long copiedBytes = Files.copy(fis, fileTarget);
+            System.out.println("copiedBytes = " + copiedBytes);
+            Files.readAllLines(Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt"))
+                    .forEach(System.out::println);
+        }
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing file to existing file using " +
+                "InputStream and no options on target Path ");
+        System.out.println("--------------------------------------");
+        // Copy to a file that does not exist
+        // Use try-with-resources to close the InputStream
+        try (FileInputStream fis = new FileInputStream(
+                fileSource.toString())) {
+            long copiedBytes = Files.copy(fis, fileTarget);
+            System.out.println("copiedBytes = " + copiedBytes);
+            Files.readAllLines(Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt"))
+                    .forEach(System.out::println);
+        } catch (IOException io) {
+            System.out.println(io);
+
+        }
+
+        System.out.println("--------------------------------------");
+        System.out.println("Existing file to existing file using " +
+                "InputStream and REPLACE_EXISTING option on target Path ");
+        System.out.println("--------------------------------------");
+        // Copy to a file that does not exist
+        // Use try-with-resources to close the InputStream
+        try (FileInputStream fis = new FileInputStream(
+                fileSource.toString())) {
+            long copiedBytes = Files.copy(fis, fileTarget,
+                    StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("copiedBytes = " + copiedBytes);
+            Files.readAllLines(Path.of("C:\\Users\\admin\\Documents\\improve-ocp\\ocp-java-se11\\IOFile\\src\\OutOfTheOrdinary\\copiedTo.txt"))
+                    .forEach(System.out::println);
+        } catch (IOException io) {
+            System.out.println(io);
+
+        }
     }
 }
