@@ -1,4 +1,4 @@
-package a.d;
+package TheLocaleClass.d;
 
 public class StaticImportTest1 {
 
