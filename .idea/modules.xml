@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AnnotationsJava/AnnotationsJava.iml" filepath="$PROJECT_DIR$/AnnotationsJava/AnnotationsJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Locale/Locale.iml" filepath="$PROJECT_DIR$/Locale/Locale.iml" />
       <module fileurl="file://$PROJECT_DIR$/IOFile/IOFile.iml" filepath="$PROJECT_DIR$/IOFile/IOFile.iml" />
       <module fileurl="file://$PROJECT_DIR$/Parallel/Parallel.iml" filepath="$PROJECT_DIR$/Parallel/Parallel.iml" />
       <module fileurl="file://$PROJECT_DIR$/Concurrency/Concurrency.iml" filepath="$PROJECT_DIR$/Concurrency/Concurrency.iml" />

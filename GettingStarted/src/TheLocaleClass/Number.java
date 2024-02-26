@@ -1,4 +1,4 @@
-package a;
+package TheLocaleClass;
 
 public class Number {
 //    Number number;

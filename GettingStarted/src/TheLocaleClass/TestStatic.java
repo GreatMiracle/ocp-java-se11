@@ -1,17 +1,15 @@
-package a;
+package TheLocaleClass;
 
 
 
-import a.d.StaticImportTest1;
+import TheLocaleClass.d.StaticImportTest1;
 //import a.d.*;
 
 //import a.d.StaticImportTest1;
-import a.e.StaticImportTest2.*;
 //
 
-import a.e.StaticImportTest2;
-import static a.d.StaticImportTest1.APP_NAME;
-import static a.e.StaticImportTest2.*;
+import TheLocaleClass.e.StaticImportTest2;
+import static TheLocaleClass.d.StaticImportTest1.APP_NAME;
 
 
 public class TestStatic {

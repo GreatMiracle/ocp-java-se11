@@ -1,4 +1,4 @@
-package a.e;
+package TheLocaleClass.e;
 
 public class StaticImportTest2 {
     public static  String APP_NAME = "Second";
