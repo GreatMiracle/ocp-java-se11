@@ -2,8 +2,32 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AnnotationsJava/AnnotationsJava.iml" filepath="$PROJECT_DIR$/AnnotationsJava/AnnotationsJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Locale/Locale.iml" filepath="$PROJECT_DIR$/Locale/Locale.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOFile/IOFile.iml" filepath="$PROJECT_DIR$/IOFile/IOFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parallel/Parallel.iml" filepath="$PROJECT_DIR$/Parallel/Parallel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Concurrency/Concurrency.iml" filepath="$PROJECT_DIR$/Concurrency/Concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fundamental/Fundamental.iml" filepath="$PROJECT_DIR$/Fundamental/Fundamental.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/Base/Base.iml" filepath="$PROJECT_DIR$/Module/Base/Base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/Concrete/Concrete.iml" filepath="$PROJECT_DIR$/Module/Concrete/Concrete.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/Global/Global.iml" filepath="$PROJECT_DIR$/Module/Global/Global.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/Module.iml" filepath="$PROJECT_DIR$/Module/Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/MyFirstModule/MyFirstModule.iml" filepath="$PROJECT_DIR$/Module/MyFirstModule/MyFirstModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/MySecond2Module/MySecond2Module.iml" filepath="$PROJECT_DIR$/Module/MySecond2Module/MySecond2Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/MySecondModule/MySecondModule.iml" filepath="$PROJECT_DIR$/Module/MySecondModule/MySecondModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" filepath="$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/QuanModule/QuanModule.iml" filepath="$PROJECT_DIR$/Module/QuanModule/QuanModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module/Utils/Utils.iml" filepath="$PROJECT_DIR$/Module/Utils/Utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exception/Exception.iml" filepath="$PROJECT_DIR$/Exception/Exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interface/Interface.iml" filepath="$PROJECT_DIR$/Interface/Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Encapsulation/Encapsulation.iml" filepath="$PROJECT_DIR$/Encapsulation/Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LVTI/LVTI.iml" filepath="$PROJECT_DIR$/LVTI/LVTI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" filepath="$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objects/objects.iml" filepath="$PROJECT_DIR$/objects/objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringRecap/StringRecap.iml" filepath="$PROJECT_DIR$/StringRecap/StringRecap.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocp-java-se11.iml" filepath="$PROJECT_DIR$/ocp-java-se11.iml" />
     </modules>
   </component>
