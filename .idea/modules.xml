@@ -3,7 +3,19 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Exception/Exception.iml" filepath="$PROJECT_DIR$/Exception/Exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interface/Interface.iml" filepath="$PROJECT_DIR$/Interface/Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
+
+
+      <module fileurl="file://$PROJECT_DIR$/Encapsulation/Encapsulation.iml" filepath="$PROJECT_DIR$/Encapsulation/Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
+
+      <module fileurl="file://$PROJECT_DIR$/Array/Array.iml" filepath="$PROJECT_DIR$/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LVTI/LVTI.iml" filepath="$PROJECT_DIR$/LVTI/LVTI.iml" />
+
       <module fileurl="file://$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" filepath="$PROJECT_DIR$/PrimitiveDataType/PrimitiveDataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objects/objects.iml" filepath="$PROJECT_DIR$/objects/objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringRecap/StringRecap.iml" filepath="$PROJECT_DIR$/StringRecap/StringRecap.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocp-java-se11.iml" filepath="$PROJECT_DIR$/ocp-java-se11.iml" />
     </modules>
   </component>
